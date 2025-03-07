@@ -9,6 +9,6 @@ A collection of courses, projects, and code snippets using Java
 
 
 ### Projects
-- [ ] 
-- [ ]
-- [ ]
+- [x] Minesweeper
+- [x] MagicSquare
+- [x] WormGame
