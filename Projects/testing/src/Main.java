@@ -4,48 +4,29 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        ArrayList<Integer> numbers = new ArrayList<>();
-        ArrayList<String> strings = new ArrayList<>();
+        Person johnny = new Person("Johnny");
+        johnny.setAge(50);
 
-        strings.add("First");
-        strings.add("Second");
-        strings.add("Third");
+        System.out.println(johnny);
+        System.out.println("Increase Johnny by 1 year.....");
+        johnny.setAge(1);
 
-        System.out.println(strings);
+        System.out.println(johnny);
 
-        removeLast(strings);
-        removeLast(strings);
+        Person timmy = new Person("Timmy");
+        System.out.println(timmy);
 
-        System.out.println(strings);
+        timmy = johnny;
+        System.out.println(timmy);
 
-    }
+        System.out.println("Increasing Timmy 100 years.....");
+        timmy.setAge(100);
 
-    private static void removeLast(ArrayList<String> strings) {
+        System.out.println(johnny);
+        System.out.println(timmy);
 
-        strings.remove(strings.size() - 1);
-
-    }
-
-    private static int sum(ArrayList<Integer> numbers) {
-        int sum = 0;
-
-        for (int number : numbers) {
-            sum += number;
-        }
-
-        return sum;
 
     }
 
-    private static void printNumbersInRange(ArrayList<Integer> numbers, int lowerLimit, int upperLimit) {
 
-        for (int number : numbers) {
-
-            if (number >= lowerLimit && number <= upperLimit) {
-                System.out.println(number);
-            }
-
-        }
-
-    }
 }
